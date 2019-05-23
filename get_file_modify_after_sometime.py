@@ -9,11 +9,10 @@ def get_time(path):
     return m_time;
 
 def visit(path):
-    '''o_time = sys.argv[2] + ' ' + sys.argv[3];'''
     try:
         file_time=get_time(path);
         file_size=os.path.getsize(path)/1024;
-        if(file_time>date and file_size>5):
+        if(file_time>date and file_size>5): '此处限定选取大小超过5M的文件'
             print(path,end=' ');
             print(file_time,'文件大小：',file_size,'MB');
     except OSError:
